@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: normal;
+    font-size: 1rem;
+    background-color: #F3F3F3;
+    scroll-behavior: smooth;
+    color: #41464b;
+}
+
+a{
+    text-decoration: none !important;
+    color: #6c757d;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+a:hover {
+    text-decoration: none !important;
+    color: #6c757d !important;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-body {
+    position: relative;
+    margin-left: 250px;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+}
+.sidebar {
+    position: fixed;
+    max-width: 250px;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: #343A40;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+}
+nav.fixed-navbar {
+    margin-left: 250px;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+}
+.content {
+    position: relative;
+    margin-top: 70px;
+}
+.right-menu > ul > li {
+    margin: 0 15px;
+    position: relative;
+}
+span.rebon {
+    position: absolute;
+    background-color: #ff9800;
+    font-size: 13px;
+    color: white;
+    padding: 0 4px;
+    border-radius: 25px;
+    top: -5px;
+    left: 12px;
+}
+.coll-nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.sidebar,
+.sidebar > ul > li > a {
+    color: #e3e3e3;
+    display: block;
+}
+.sidebar > ul > li > a:hover{
+    color: #e3e3e3 !important;
+}
+.title {
+    text-align: center;
+    border-bottom: 1px solid #4e4e4e;
+    padding: 10px;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+ul.nav-list {
+    padding: 10px;
+    position: relative;
+}
+  li.active {
+    background-color: #007BFF;
+}
+li.nav-items {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+@media (max-width:991px) {
+    .main-body{
+        margin-left: 0px;
+    }
+    nav.fixed-navbar{
+        margin-left: 0px;
+    }
+}
