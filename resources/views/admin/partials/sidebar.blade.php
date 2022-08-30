@@ -3,8 +3,8 @@
         <h4>Admin</h4>
     </div>
     <ul class="nav-list">
-        <li class="nav-items {{ Route::is('admin.dasboard') ? 'active':'' }}">
-            <a href="{{ route('admin.dasboard') }}"><span class="mr-2"><i class="fas fa-tachometer-alt"></i></span>Dashboard</a>
+        <li class="nav-items {{ Route::is('admin.dashboard') ? 'active':'' }}">
+            <a href="{{ route('admin.dashboard') }}"><span class="mr-2"><i class="fas fa-tachometer-alt"></i></span>Dashboard</a>
         </li>
         <li class="nav-items {{ Route::is('admin.user') || Route::is('admin.user.detail') ? 'active':'' }}">
             <a href="{{ route('admin.user') }}"><span class="mr-2"><i class="fas fa-edit"></i></span>User List</a>

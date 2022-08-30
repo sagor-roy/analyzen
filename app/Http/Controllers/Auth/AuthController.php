@@ -40,10 +40,10 @@ class AuthController extends Controller
                 if (Auth::user()->status == 1) {
                     if (Auth::user()->role === 'admin') {
                         Toastr::success(Auth::user()->name . ' Welcome to your Dashboard');
-                        return redirect()->route('admin.dasboard');
+                        return redirect()->route('admin.dashboard');
                     }
                     Toastr::success(Auth::user()->name . ' Welcome to your Dashboard');
-                    return redirect()->route('user.dasboard');
+                    return redirect()->route('user.dashboard');
                 }
                 Auth::logout();
                 Session::flash('type', 'warning');

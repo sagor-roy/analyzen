@@ -44,5 +44,19 @@ class UserSeeder extends Seeder
                 'remember_token' => Str::random(10),
             ]
         );
+
+        User::create(
+            [
+                'role' => 'user',
+                'phone' => '0140xxxxxx',
+                'link' => 'https://google.com',
+                'name' => 'Candidate',
+                'status' => 1,
+                'email' => 'candidate@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('000000'),
+                'remember_token' => Str::random(10),
+            ]
+        );
     }
 }

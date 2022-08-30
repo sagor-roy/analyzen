@@ -38,7 +38,7 @@ Route::prefix('admin')->middleware('auth','isAdmin')->name('admin.')->group(func
     // logout route
     Route::get('logout', [DashboardController::class, 'logout'])->name('logout');
     // admin dashboard
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dasboard');
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // user manage route
     Route::get('user', [UserController::class, 'user'])->name('user');
