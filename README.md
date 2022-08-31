@@ -17,16 +17,23 @@ php artisan migrate
 ```
 php artisan db:seed
 ```
--প্রজেক্টি run করার জন্য নিচের cmd run করুন এবং সবকিছু ঠিক থাকলে [http://127.0.0.1:8000/](http://127.0.0.1:8000/) এই এড্রেস টি ব্রাউজার হিট করুন। 
+- প্রজেক্টি run করার জন্য নিচের cmd run করুন এবং সবকিছু ঠিক থাকলে [http://127.0.0.1:8000/](http://127.0.0.1:8000/) এই এড্রেস টি ব্রাউজার হিট করুন। 
 ```
 php artisan serve
 ```
 
-## Learning Laravel
+## লগইন
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- শুরুতেই আপনি একটি লগইন ফর্ম দেখতে পাবেন। এই লগইন ফর্মের মাধ্যমে Admin এবং User তার Approval একাউন্ট দিয়ে দুইজনেই তার নিজ নিজ Dashboard যেতে পারবেন এবং এখানে Register করার জন্য যে ফর্ম দেখা হয়েছে শুধুমাত্র User এর জন্য। আমরা জানি Admin এর জন্য Register ফর্ম থাকেনা। 
+- যদি কোনো user রেজিস্টার করে থাকেন তাহলে তাকে সাথে সাথে লগইন করতে দেয়া হবে না যতক্ষণ না পর্যন্ত Admin তাকে Approved করবে ততক্ষন পর্যন্ত User তার Dashboard এ যেতে পারবেনা। 
+- নিচে দুটি Approval একাঊন্ট দেয়া হলো Check করার জন্য। 
+```
+admin@gmail.com
+password : 000000
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+user@gmail.com
+password : 000000
+```
 
 ## Laravel Sponsors
 
