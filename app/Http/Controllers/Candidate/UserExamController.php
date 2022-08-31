@@ -33,21 +33,27 @@ class UserExamController extends Controller
     // user exam list page
     public function start($exam_id)
     {
-        $check = Answer::where('exam_id', $exam_id)->where('user_id', Auth::user()->id)->first();
-        if (!$check) {
-            $exam = Exam::findorfail($exam_id);
-            $user = json_decode($exam->user_id);
-            foreach ($user as $users) {
-                if (Auth::user()->id == $users) {
-                    $data = Question::where('quiz_id', $exam->quiz_id)->get();
-                    $quiz = Quiz::findorfail($exam->quiz_id);
-                    return view('candidate.exam.question', compact('data', 'quiz', 'exam_id'));
+        try {
+            $check = Answer::where('exam_id', $exam_id)->where('user_id', Auth::user()->id)->first();
+            if (!$check) {
+                $exam = Exam::findorfail($exam_id);
+                $user = json_decode($exam->user_id);
+                foreach ($user as $users) {
+                    if (Auth::user()->id == $users) {
+                        $data = Question::where('quiz_id', $exam->quiz_id)->get();
+                        $quiz = Quiz::findorfail($exam->quiz_id);
+                        return view('candidate.exam.question', compact('data', 'quiz', 'exam_id'));
+                    }
                 }
+                abort(404);
             }
-            abort(404);
+            Toastr::warning("Already you have attend this exam");
+            return redirect()->back();
+        } catch (Exception $error) {
+            session()->flash('type', 'error');
+            session()->flash('message', $error->getMessage());
+            return redirect()->back();
         }
-        Toastr::warning("Already you have attend this exam");
-        return redirect()->back();
     }
 
     // exam store
