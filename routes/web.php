@@ -71,8 +71,11 @@ Route::prefix('user')->middleware('auth','isUser')->name('user.')->group(functio
     Route::get('logout', [HomeController::class, 'logout'])->name('logout');
     // candidate dashboard
     Route::get('dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('result/{id}', [HomeController::class, 'result'])->name('result');
 
     // exam manage route
     Route::get('exam',[UserExamController::class,'exam'])->name('exam');
+    Route::get('exam/{exam_id}',[UserExamController::class,'start'])->name('exam.start');
+    Route::post('exam/store',[UserExamController::class,'store'])->name('exam.store');
     
 });
