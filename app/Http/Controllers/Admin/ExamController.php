@@ -13,7 +13,6 @@ use App\Models\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class ExamController extends Controller
@@ -61,14 +60,20 @@ class ExamController extends Controller
     // user result
     public function result($id, $user_id)
     {
-        $check = Answer::where('exam_id', $id)->where('user_id', $user_id)->first();
-        if ($check) {
-            $items = Item::where('answer_id', $check->id)->get();
-            $data = Question::where('quiz_id', $check->quiz_id)->get();
-            $result = Result::where('ans_id', $check->id)->first()->total;
-            $title = Quiz::findorfail($check->quiz_id)->title;
-            return view('admin.exam.result', compact('result', 'data', 'title', 'items'));
+        try {
+            $check = Answer::where('exam_id', $id)->where('user_id', $user_id)->first();
+            if ($check) {
+                $items = Item::where('answer_id', $check->id)->get();
+                $data = Question::where('quiz_id', $check->quiz_id)->get();
+                $result = Result::where('ans_id', $check->id)->first()->total;
+                $title = Quiz::findorfail($check->quiz_id)->title;
+                return view('admin.exam.result', compact('result', 'data', 'title', 'items'));
+            }
+            abort(404);
+        } catch (Exception $error) {
+            session()->flash('type', 'error');
+            session()->flash('message', $error->getMessage());
+            return redirect()->back();
         }
-        abort(404);
     }
 }
