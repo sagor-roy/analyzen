@@ -48,20 +48,12 @@ password : 000000
 - Quiz তৈরী করা হলে সেই কুইজ এর Under এ আপনি Question তৈরী করতে পারবেন এবং সেখানে Create Question নামে একটি বাটন দেখতে পাচ্ছেন। এই বাটন এ ক্লিক করলে আপনার Question তৈরী হয়ে যাবে সাথে Quiz টি Edit, Delete সবকিছুই করতে পারবেন।  
 - একটি কুইজ এর under এ কতগুলো Question আছে তা দেখতে চাইলে View Question নামের বাটন এ ক্লিক করুন এবং ক্লিক করলে ওই Quiz এর যতগুলো Question আছে সব দেখতে পারবেন সাথে Question গুলা Edit , Delete করতে পারবেন।
 
-### Premium Partners
+## Exam Attend
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
+- Exam Attend বাটন এ ক্লিক করলে আপনি এখান থেকে Exam Group তৈরী করতে পারবেন। উপরের ডান পাশে Add Exam Group নামের বাটন এ ক্লিক করুন। ক্লিক করলে একটি Modal Popup হয়ে আসবে এবং প্রথমে Quiz সিলেক্ট করতে হবে তারপর ওই Quiz টি কোন কোন User Attend করতে পারবেন তাদেরকে সিলেক্ট করুন। 
+- যেসমস্ত User কে সিলেক্ট করেছেন শুধুমাত্র ওই User রাই Quiz টি খেলতে পারবেন।
+- Exam Group টি তৈরী করা হয়ে গেলে আপনার সিলেক্ট করা Quiz এর টাইটেল এবং সিলেক্ট করা User / Candidate দেখতে পাবেন।
+- তারপর সেখানে View Result নামে একটি বাটন আছে এই বাটন এ ক্লিক করলে আপনি যে যে User কে সিলেক্ট করেছেন তারা Quiz টি খেলে থাকলে তাদের রেজাল্ট দেখতে পারবেন এবং প্রত্যেক - User এর View Details নামের একটি বাটন আছে সেই বাটন এ ক্লিক করলে ওই User টি কোন কোন Question এর ভুল / সঠিক  answer করেছেন তা সবুজ=correct  এবং লাল=wrong Alert এর মাধ্যমে চিহ্নিত করা হয়েছে সাথে Pass Mark এবং Toatal Score দেখানো হয়েছে। 
+- এখানে প্রতিটি Question এর  Mark ৫ করে ধরা হয়েছে এবং যতগুলা Question থাকবে তার উপর নির্ভর করে ৭০% Mark পেতে হবে।
+- একটি কুইজ একজন User একবার খেলে থাকলে ওই Quiz টি আর দ্বিতীয় বার খেলতে পারবেনা।
 
