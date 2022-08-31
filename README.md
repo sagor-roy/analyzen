@@ -1,15 +1,9 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://analyzen.com" target="_blank"><img src="https://www.mssplatform.com/assets/img/partner/analyzen-logo.png" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## প্রজেক্টের বর্ণনা:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+এটি একটি ছোট কুইজ টেস্ট এপ্লিকেশন। এই এপ্লিকেশন এর মাধ্যমে একাধিক ইউসার কুইজ টেস্টে অংশগ্রহণ করতে পারবেন। তবে ইউসার কুইজ টেস্টে অংশগ্রহণ করার পূর্বে তাকে অবশ্যই approval ইউসার হতে হবে। যদি ইউসার approval ইউসার হয়ে থাকে তাহলে এডমিন কোনো কুইজ টেস্টে অংশগ্রহণ করার জন্য পারমিশন দিলে ওই ইউসার কুইজ টি খেলতে পারবেন এবং কুইজ সাবমিট করার সাথে সাথে তার রেজাল্ট দেখতে পারবেন। এই এপ্লিকেশন এর সমস্ত functionality এডমিন তার নিজের মতো করে হ্যান্ডেল করতে পারবেন।  আমরা এগুলা নিয়ে নিচে বিস্তারিত আলোচনা করবো। তবে চলুন এই ছোট প্রজেক্টি কিভাবে আপনার লোকাল মেশিনে সেটআপ করবেন। 
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
