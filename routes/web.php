@@ -10,16 +10,6 @@ use App\Http\Controllers\Candidate\HomeController;
 use App\Http\Controllers\Candidate\UserExamController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 
 //******************* AUTH ********************* */
@@ -62,6 +52,8 @@ Route::prefix('admin')->middleware('auth','isAdmin')->name('admin.')->group(func
     // exam manage route
     Route::get('exam',[ExamController::class,'exam'])->name('exam');
     Route::post('exam/store',[ExamController::class,'store'])->name('exam.store');
+    Route::get('exam/view/{id}',[ExamController::class,'view'])->name('exam.view');
+    Route::get('exam/result/{exam_id}/{user_id}',[ExamController::class,'result'])->name('exam.result');
 });
 
 //******************* CANDIDATE ********************* */

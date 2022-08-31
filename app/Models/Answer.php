@@ -14,4 +14,12 @@ class Answer extends Model
         'quiz_id',
         'user_id',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function ques(){
+        return $this->hasMany(Question::class,'quiz_id','quiz_id');
+    }
 }

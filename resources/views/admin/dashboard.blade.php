@@ -9,7 +9,34 @@
                     <div class="page-header mb-3">
                         <h4>Dashboard Admin</h4>
                     </div>
-
+                    <div class="row mt-5">
+                        <div class="col-md-6 offset-md-3">
+                            <div class="card card-body">
+                                <div class="text-center">
+                                    <img src="https://www.kindpng.com/picc/m/22-223910_circle-user-png-icon-transparent-png.png" class="rounded-circle" width="150" alt="">
+                                    <table class="table mt-4">
+                                        <tbody>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>:</td>
+                                                <td>{{ Auth::user()->name }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td>:</td>
+                                                <td>{{ Auth::user()->email }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone</td>
+                                                <td>:</td>
+                                                <td>{{ Auth::user()->phone }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

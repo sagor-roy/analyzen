@@ -68,7 +68,7 @@
                             <th>SL</th>
                             <th>Quiz Title</th>
                             <th>Candidate</th>
-                            <th width="30%">Action</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,9 +85,7 @@
                                 @endforeach
                             </td>
                             <td>
-                                <a href="" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="" class="btn btn-sm btn-info">View Result</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="{{ route('admin.exam.view',$item->id) }}" class="btn btn-sm btn-info">View Result</a>
                             </td>
                         </tr>
                         @endforeach
