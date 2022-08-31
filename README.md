@@ -7,7 +7,7 @@
 
 - এই ছোট প্রজেক্টি সেটআপ করার জন্য আপনার মেশিনে অবশ্যই একটি লোকাল সার্ভার ইনস্টল করতে হবে। সেটি হতে পারে [Xampp](https://www.apachefriends.org/) , [WampServer](https://www.wampserver.com/en/download-wampserver-64bits/) অথবা [Laragon](https://laragon.org/). তবে লোকাল সার্ভারটি ইনস্টল করার পূর্বে অবশ্যই PHP >= ৮.০ এর সমান অথবা উপরের কোনো লেটেস্ট ভার্সন দেখে ইনস্টল করতে হবে এবং সাথে [composer.exe](https://getcomposer.org/download/) ইনস্টল করতে হবে। যদি লোকাল সার্ভারটি ইনস্টল করতে সমস্যা হয় তাহলে আমি একটি ইউটুবের ভিডিও লিংক শেয়ার করলাম এখন থেকে বিস্তারিত দেখে নিবেন [How to install Xammp Server in windows](https://youtu.be/FG_tpCCFwOQ)
 - প্রথমে প্রজেক্টি গিটহাব থেকে clone করে নিবেন। ক্লোন করা হয়ে গেলে composer install নামে কম্যান্ড টি দিতে হবে। এই command এর মাধ্যমে আমাদের প্রজেক্টের প্রয়োজনীয় প্যাকেজ গুলো vendor ফোল্ডারে ডাউনলোড হয়ে যাবে। 
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- প্রজেক্টের ভীতরে  .env.example নামে ফাইল আছে সেটিকে duplicate করে rename করুন এবং এটির নাম  .env দিতে হবে। 
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
 - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
