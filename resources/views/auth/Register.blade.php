@@ -12,31 +12,31 @@
                             @csrf
                             <div class="mt-2">
                                 <label class="f-12">Name</label>
-                                <input type="text" class="form-control" placeholder="Name" name="name" >
+                                <input type="text" class="form-control" placeholder="Name" name="name"  required>
                             </div>
                             <div class="mt-2">
                                 <label class="f-12">Email</label>
-                                <input type="email" class="form-control" placeholder="Email" name="email">
+                                <input type="email" class="form-control" placeholder="Email" name="email" required>
                             </div>
                             <div class="mt-2">
                                 <label class="f-12">Phone</label>
-                                <input type="number" class="form-control" placeholder="Phone" name="phone">
+                                <input type="number" class="form-control" placeholder="Phone" name="phone" required>
                             </div>
                             <div class="mt-2">
                                 <label class="f-12">CV Link</label>
-                                <input type="text" class="form-control" placeholder="CV Link" name="link">
+                                <input type="text" class="form-control" placeholder="CV Link" name="link" required>
                             </div>
 
                             <div class="mt-2 mb-2">
                                 <label class="">Password</label>
                                 <input name="password" type="password" class="form-control" placeholder="Password"
-                                    >
+                                     required>
                             </div>
 
                             <div class="mt-2 mb-2">
                                 <label class="">Confirm Password</label>
                                 <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password"
-                                    >
+                                     required>
                             </div>
 
                             <div class="mt-4">

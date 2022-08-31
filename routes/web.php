@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//******************* AUTH ********************* */
+//******************* AUTH ROUTE ********************* */
 //************************************************ */
 Route::middleware('guest')->controller(AuthController::class)->group(function () {
     Route::get('/', 'login')->name('login');
@@ -22,7 +22,7 @@ Route::middleware('guest')->controller(AuthController::class)->group(function ()
 });
 
 
-//******************* ADMIN ********************* */
+//******************* ADMIN ROUTE ********************* */
 //************************************************ */
 Route::prefix('admin')->middleware('auth', 'isAdmin')->name('admin.')->group(function () {
     // logout route
@@ -64,7 +64,7 @@ Route::prefix('admin')->middleware('auth', 'isAdmin')->name('admin.')->group(fun
     });
 });
 
-//******************* CANDIDATE ********************* */
+//******************* CANDIDATE ROUTE ********************* */
 //************************************************ */
 Route::prefix('user')->middleware('auth', 'isUser')->name('user.')->group(function () {
     Route::controller(HomeController::class)->group(function () {
