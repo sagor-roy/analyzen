@@ -35,9 +35,11 @@ user@gmail.com
 password : 000000
 ```
 
-## Laravel Sponsors
+## Admin Dashboard
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- আপনি যদি অ্যাডমিন হিসাবে লগইন করেন তাহলে সাইডবারে User List নামে একটি লিংক দেখতে পাচ্ছেন এবং সেখানে ক্লিক করুন।
+- ক্লিক করার পর এখানে সমস্ত User এর লিস্ট দেখানো হয়েছে শুধু অ্যাডমিন বাদে।
+- আপনি এই User List থেকে একজন User কে Approved এবং Reject করতে পারবেন সাথে User এর Details View ,Edit ,Delete সবকিছুই করতে পারবেন।
 
 ### Premium Partners
 
