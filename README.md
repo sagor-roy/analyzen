@@ -13,10 +13,14 @@
 php artisan key:generate
 php artisan migrate
 ```
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- সবকিছু ঠিক থাকলে উপরের cmd run করেন এবং আপনি যদি Fake Data নিয়ে প্রজেক্টি টেস্ট করতে চান তাহলে নিচের cmd run .
+```
+php artisan db:seed
+```
+-প্রজেক্টি run করার জন্য নিচের cmd run করুন এবং সবকিছু ঠিক থাকলে [http://127.0.0.1:8000/](http://127.0.0.1:8000/) এই এড্রেস টি ব্রাউজার হিট করুন। 
+```
+php artisan serve
+```
 
 ## Learning Laravel
 
