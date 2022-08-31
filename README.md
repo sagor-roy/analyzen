@@ -65,7 +65,7 @@ password : 000000
 - Using Trait
 - Using migration, factory, seeder
 - Using notiy toaster
-- Clean code
+- Logical & functional clean code
 
 ### প্রজেক্টি বাংলায় বর্ণনা করার জন্য আন্তরিক ভাবে দুঃখিত। 
 
