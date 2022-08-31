@@ -9,7 +9,7 @@
 - প্রথমে প্রজেক্টি গিটহাব থেকে clone করে নিবেন। ক্লোন করা হয়ে গেলে composer install নামে কম্যান্ড টি দিতে হবে। এই command এর মাধ্যমে আমাদের প্রজেক্টের প্রয়োজনীয় প্যাকেজ গুলো vendor ফোল্ডারে ডাউনলোড হয়ে যাবে। 
 - প্রজেক্টের ভীতরে .env.example নামে একটি ফাইল আছে সেটিকে duplicate করে rename করুন এবং এটির নাম .env দিতে হবে। 
 - এবার একটি ডাটাবেস তৈরি করুন। ডাটাবেস হিসাবে আমরা Mysql ব্যবহার করেছি। ডাটাবেস যদি তৈরী করা হয়ে থাকে তাহলে সেই ডাটাবেসের নামটি .env ফাইলের মধ্যে connect করুন। 
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- >php artisan serve
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
