@@ -23,6 +23,8 @@
     <script src="{{ asset('assets/js/toastr.min.js') }}"></script>
     
     {!! Toastr::message() !!}
+
+    @yield('script')
 </body>
 
 </html>
