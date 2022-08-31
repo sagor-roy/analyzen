@@ -13,7 +13,7 @@
 php artisan key:generate
 php artisan migrate
 ```
-- সবকিছু ঠিক থাকলে উপরের cmd run করেন এবং আপনি যদি Fake Data নিয়ে প্রজেক্টি টেস্ট করতে চান তাহলে নিচের cmd run .
+- সবকিছু ঠিক থাকলে উপরের cmd run করেন এবং এবং নিচের cmd টি অবশ্যই run করতে হবে php artisan db:seed এই cmd চালানোর পর কিছু Fake Data তৈরী হবে সাথে দুইটি Approval একাউন্ট তৈরী হবে।
 ```
 php artisan db:seed
 ```
