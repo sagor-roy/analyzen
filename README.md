@@ -57,3 +57,20 @@ password : 000000
 - এখানে প্রতিটি Question এর  Mark ৫ করে ধরা হয়েছে এবং যতগুলা Question থাকবে তার উপর নির্ভর করে ৭০% Mark পেতে হবে।
 - একটি কুইজ একজন User একবার খেলে থাকলে ওই Quiz টি আর দ্বিতীয় বার খেলতে পারবেনা।
 
+### What I used
+
+- Use laravel, MySql
+- Laravel custom multiple Authentication with role
+- Custom middleware
+- Using Trait
+- Using migration, factory, seeder
+- Using notiy toaster
+- Clean code
+
+### প্রজেক্টি বাংলায় বর্ণনা করার জন্য আন্তরিক ভাবে দুঃখিত। 
+
+- প্রজেক্টি রান করতে বা কোথাও বুঝতে প্রবলেম হলে দয়া করে একটু যোগাযোগ করবেন বা মেইল করলেও হবে। 
+- sagorroy204@gmail.com
+- 01785400204
+- আমি প্রজেক্টি লাইভ সার্ভারে তুলে দিয়েছি চাইলে এখান থেকেও চেক করতে পারেন।
+- [http://quiz.hrventureai.com](http://quiz.hrventureai.com)
