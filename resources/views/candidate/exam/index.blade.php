@@ -22,6 +22,7 @@
                         <tr>
                             <th>SL</th>
                             <th>Quiz Title</th>
+                            <th>Time</th>
                             <th>Total Question</th>
                             <th>Total Marks</th>
                             <th>Pass Marks</th>
@@ -31,7 +32,9 @@
                     <tbody>
                         @foreach ($exam as $item)
                             @php
-                                $check = \App\Models\Answer::where('exam_id', $item->id)->where('user_id',Auth::user()->id)->first();
+                                $check = \App\Models\Answer::where('exam_id', $item->id)
+                                    ->where('user_id', Auth::user()->id)
+                                    ->first();
                                 $user = json_decode($item->user_id);
                                 $marks = $item->quiz->ques->count() * 5;
                                 $total = ($marks * 70) / 100;
@@ -41,14 +44,19 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->quiz->title }}</td>
+                                        <td>{{ $item->time }}</td>
                                         <td>{{ $item->quiz->ques->count() }}</td>
                                         <td>{{ $item->quiz->ques->count() * 5 }}</td>
                                         <td>{{ $total }}</td>
                                         <td>
                                             @if ($check)
-                                                <button class="btn bt-sm btn-success disabled">Complete</button>
-                                                <a href="{{ route('user.result',$item->id) }}"
-                                                    class="btn bt-sm btn-primary">See Result</a>
+                                                @if (\App\Models\Result::where('ans_id', $check->id)->first())
+                                                    <button class="btn bt-sm btn-success disabled">Done</button>
+                                                    <a href="{{ route('user.result', $item->id) }}"
+                                                        class="btn bt-sm btn-primary">See Result</a>
+                                                @else
+                                                    <button class="btn bt-sm btn-danger disabled">Rejected</button>
+                                                @endif
                                             @else
                                                 <a href="{{ route('user.exam.start', ['exam_id' => $item->id]) }}"
                                                     class="btn bt-sm btn-primary">Exam Start</a>

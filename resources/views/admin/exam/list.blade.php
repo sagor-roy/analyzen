@@ -30,15 +30,22 @@
                     </thead>
                     <tbody>
                         @foreach ($ans as $item)
+                            @php
+                                $result = \App\Models\Result::find($item->id)->total ?? 'Expired';
+                            @endphp
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->user->name }}</td>
                                 <td>{{ $item->user->email }}</td>
                                 <td>{{ $item->ques->count() * 5 }}</td>
-                                <td>{{ \App\Models\Result::findorfail($item->id)->total }}</td>
+                                <td>{{ $result }}</td>
                                 <td>
-                                    <a href="{{ route('admin.exam.result', ['exam_id' => $item->exam_id, 'user_id' => $item->user->id]) }}"
-                                        class="btn btn-info">View Details</a>
+                                    @if ($result == 'Expired')
+                                        <button class="btn bt-sm btn-danger disabled">Rejected</button>
+                                    @else
+                                        <a href="{{ route('admin.exam.result', ['exam_id' => $item->exam_id, 'user_id' => $item->user->id]) }}"
+                                            class="btn btn-info">View Details</a>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach

@@ -31,7 +31,7 @@
                             <div class="modal-body">
                                 <div class="mb-2">
                                     <label>Select Quiz</label>
-                                    <select name="quiz" class="form-control">
+                                    <select name="quiz" class="form-control" required>
                                         <option value="">Select Quiz</option>
                                         @foreach ($quiz as $item)
                                             <option value="{{ $item->id }}">{{ $item->title }}</option>
@@ -40,9 +40,14 @@
                                 </div>
 
                                 <div class="mb-2">
+                                    <label for="">Exam Time</label>
+                                    <input type="number" placeholder="Enter exam time" name="time" class="form-control" required>
+                                </div>
+
+                                <div class="mb-2">
                                     <label>Select Candidate</label><br>
                                     <select id="select_two" class="form-control" name="user[]"
-                                        multiple="multiple">
+                                        multiple="multiple" >
                                         @foreach ($user as $item)
                                             <option value="{{ $item->id }}">{{ $item->name }}</option>
                                         @endforeach
@@ -67,6 +72,7 @@
                         <tr>
                             <th>SL</th>
                             <th>Quiz Title</th>
+                            <th>Time</th>
                             <th>Candidate</th>
                             <th>Action</th>
                         </tr>
@@ -79,6 +85,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->quiz->title }}</td>
+                            <td>{{ $item->time }}</td>
                             <td>
                                 @foreach ($users as $items)
                                     <span style="color: #e9ecef;font-weight:300" class="badge bg-secondary">{{ \App\Models\User::find($items)->name }}</span>

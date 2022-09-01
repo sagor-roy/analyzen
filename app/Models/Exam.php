@@ -11,14 +11,17 @@ class Exam extends Model
 
     protected $fillable = [
         'quiz_id',
-        'user_id'
+        'user_id',
+        'time'
     ];
 
-    public function quiz(){
+    public function quiz()
+    {
         return $this->belongsTo(Quiz::class);
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

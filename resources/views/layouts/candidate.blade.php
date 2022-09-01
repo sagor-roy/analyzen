@@ -36,6 +36,7 @@
     <script src="{{ asset('assets/js/dataTables.bootstrap4.min.js') }}"></script>
     <!-- Script -->
     <script src="{{ asset('assets/js/select2.min.js') }}"></script>
+    @yield('script')
     {!! Toastr::message() !!}
     <script>
         $(document).ready(function() {

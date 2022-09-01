@@ -17,7 +17,8 @@ class ExamSeeder extends Seeder
     {
         Exam::create([
             'quiz_id' => 1,
-            'user_id' => '["2"]'
+            'user_id' => '["2"]',
+            'time' => 10
         ]);
     }
 }

@@ -36,6 +36,7 @@
     <script src="{{ asset('assets/js/dataTables.bootstrap4.min.js') }}"></script>
     <!-- Script -->
     <script src="{{ asset('assets/js/select2.min.js') }}"></script>
+    @yield('script')
     <script>
         $(document).ready(function() {
             $('#example').DataTable();

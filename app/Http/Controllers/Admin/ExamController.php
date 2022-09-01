@@ -33,13 +33,15 @@ class ExamController extends Controller
             $validator = Validator::make($request->all(), [
                 'quiz' => 'required',
                 'user' => 'required',
+                'time' => 'required'
             ]);
             if ($validator->fails()) {
                 return redirect()->back()->withErrors(Toastr::error($validator->errors()->all()[0]))->withInput();
             }
             Exam::create([
                 'quiz_id' => $request->quiz,
-                'user_id' => json_encode($request->user)
+                'user_id' => json_encode($request->user),
+                'time' => $request->time
             ]);
             Toastr::success('Exam group create successfull');
             return redirect()->back();
@@ -53,7 +55,6 @@ class ExamController extends Controller
     public function view($id)
     {
         $ans = Answer::where('exam_id', $id)->with('user', 'ques')->orderBy('id', 'desc')->get();
-        //return $ans;
         return view('admin.exam.list', compact('ans'));
     }
 

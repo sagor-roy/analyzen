@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('exams', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('quiz_id');
+            $table->bigInteger('time');
             $table->text('user_id');
             $table->timestamps();
         });
