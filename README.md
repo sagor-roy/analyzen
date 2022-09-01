@@ -1,5 +1,6 @@
 <p align="center"><a href="https://analyzen.com" target="_blank"><img src="https://www.mssplatform.com/assets/img/partner/analyzen-logo.png" width="400" alt="Laravel Logo"></a></p>
 
+<p align="center"><b>Note</b> : The documentation A to Z must be read carefully</p>
 
 ## প্রজেক্টের বর্ণনা:
 
