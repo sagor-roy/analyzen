@@ -31,7 +31,6 @@
                     <tbody>
                         @foreach ($ans as $item)
                             @php
-                                $result = \App\Models\Result::find($item->id)->total ?? 'Expired';
                                 $res = \App\Models\Result::where('ans_id',$item->id)->first();
                             @endphp
                             <tr>
@@ -39,7 +38,7 @@
                                 <td>{{ $item->user->name }}</td>
                                 <td>{{ $item->user->email }}</td>
                                 <td>{{ $item->ques->count() * 5 }}</td>
-                                <td>{{ $result }}</td>
+                                <td>{{ \App\Models\Result::where('ans_id',$item->id)->first()->total ?? 'Expired' }}</td>
                                 <td>
                                     @if (!$res)
                                         <button class="btn bt-sm btn-danger disabled">Rejected</button>
