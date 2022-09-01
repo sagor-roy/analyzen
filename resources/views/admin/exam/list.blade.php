@@ -38,7 +38,7 @@
                                 <td>{{ $item->user->name }}</td>
                                 <td>{{ $item->user->email }}</td>
                                 <td>{{ $item->ques->count() * 5 }}</td>
-                                <td>{{ \App\Models\Result::where('ans_id',$item->id)->first()->total ?? 'Expired' }}</td>
+                                <td>{{ $res->total ?? 'Expired' }}</td>
                                 <td>
                                     @if (!$res)
                                         <button class="btn bt-sm btn-danger disabled">Rejected</button>
