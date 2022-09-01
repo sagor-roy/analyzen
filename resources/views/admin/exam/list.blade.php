@@ -32,6 +32,7 @@
                         @foreach ($ans as $item)
                             @php
                                 $result = \App\Models\Result::find($item->id)->total ?? 'Expired';
+                                $res = \App\Models\Result::where('ans_id',$item->id)->first();
                             @endphp
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
@@ -40,7 +41,7 @@
                                 <td>{{ $item->ques->count() * 5 }}</td>
                                 <td>{{ $result }}</td>
                                 <td>
-                                    @if ($result == 'Expired')
+                                    @if (!$res)
                                         <button class="btn bt-sm btn-danger disabled">Rejected</button>
                                     @else
                                         <a href="{{ route('admin.exam.result', ['exam_id' => $item->exam_id, 'user_id' => $item->user->id]) }}"
