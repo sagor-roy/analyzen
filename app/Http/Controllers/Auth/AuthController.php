@@ -22,7 +22,7 @@ class AuthController extends Controller
     // register page
     public function register()
     {
-        return view('auth.register');
+        return view('auth.signup');
     }
 
 
