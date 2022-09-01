@@ -35,7 +35,7 @@
                                 <td>{{ $item->user->name }}</td>
                                 <td>{{ $item->user->email }}</td>
                                 <td>{{ $item->ques->count() * 5 }}</td>
-                                <td>{{ \App\Models\Result::findorfail($item->id)->total }}</td>
+                                <td>{{ \App\Models\Result::where('ans_id',$item->id)->first()->total ?? 0 }}</td>
                                 <td>
                                     <a href="{{ route('admin.exam.result', ['exam_id' => $item->exam_id, 'user_id' => $item->user->id]) }}"
                                         class="btn btn-info">View Details</a>
