@@ -32,7 +32,7 @@ class QuestionFactory extends Factory
     public function definition()
     {
         return [
-            'quiz_id' => $this->faker->numberBetween(1,20),
+            'quiz_id' => $this->faker->numberBetween(1,10),
                 'title' => $this->faker->realText(35),
                 'a' => $this->faker->realText(10),
                 'b' => $this->faker->realText(10),

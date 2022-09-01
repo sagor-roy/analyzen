@@ -20,8 +20,9 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(UserSeeder::class);
-        Quiz::factory(20)->create();
-        Question::factory(200)->create();
+        Quiz::factory(10)->create();
+        Question::factory(150)->create();
+        $this->call(ExamSeeder::class);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
