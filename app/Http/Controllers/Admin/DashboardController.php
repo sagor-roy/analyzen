@@ -14,14 +14,6 @@ class DashboardController extends Controller
         return view('admin.dashboard');
     }
 
-
-    // admin logut
-    public function user(){
-        Auth::logout();
-        Toastr::success('Logout Succesful!!!');
-        return redirect()->route('login');
-    }
-
     // admin logut
     public function logout(){
         Auth::logout();
