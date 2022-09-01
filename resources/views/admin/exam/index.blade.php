@@ -40,8 +40,8 @@
                                 </div>
 
                                 <div class="mb-2">
-                                    <label for="">Exam Time</label>
-                                    <input type="number" placeholder="Enter exam time" name="time" class="form-control" required>
+                                    <label for="">Exam Time <small><i>(minute)</i></small></label>
+                                    <input type="number" placeholder="example : 25" name="time" class="form-control" required>
                                 </div>
 
                                 <div class="mb-2">
