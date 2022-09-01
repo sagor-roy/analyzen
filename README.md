@@ -66,6 +66,7 @@ password : 000000
 - Using migration, factory, seeder
 - Using notiy toaster
 - Logical & functional clean code
+- Highly secured
 
 ### Support 
 
