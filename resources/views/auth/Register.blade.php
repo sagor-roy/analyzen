@@ -43,6 +43,7 @@
                         <div class="mt-4">
                             <span>Already have an account ? <a href="{{ route('login') }}" class="mt-1">Login</a></span>
                         </div>
+                        
                     </div>
                 </div>
             </div>
