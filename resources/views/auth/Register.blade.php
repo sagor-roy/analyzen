@@ -26,19 +26,16 @@
                                 <label class="f-12">CV Link</label>
                                 <input type="text" class="form-control" placeholder="CV Link" name="link" required>
                             </div>
-
                             <div class="mt-2 mb-2">
                                 <label class="">Password</label>
                                 <input name="password" type="password" class="form-control" placeholder="Password"
                                      required>
                             </div>
-
                             <div class="mt-2 mb-2">
                                 <label class="">Confirm Password</label>
                                 <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password"
                                      required>
                             </div>
-
                             <div class="mt-4">
                                 <button type="submit" class="btn btn-primary w-100">Register</button>
                             </div>
