@@ -67,7 +67,7 @@ password : 000000
 - Using notiy toaster
 - Logical & functional clean code
 
-### প্রজেক্টি বাংলায় বর্ণনা করার জন্য আন্তরিক ভাবে দুঃখিত। 
+### Support 
 
 - প্রজেক্টি রান করতে বা কোথাও বুঝতে প্রবলেম হলে দয়া করে একটু যোগাযোগ করবেন বা মেইল করলেও হবে। 
 - sagorroy204@gmail.com
