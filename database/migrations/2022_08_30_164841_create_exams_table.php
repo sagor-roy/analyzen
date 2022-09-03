@@ -19,6 +19,7 @@ return new class extends Migration
             $table->bigInteger('time');
             $table->text('user_id');
             $table->timestamps();
+            $table->foreign('quiz_id')->references('id')->on('quizzes')->onDelete('cascade');
         });
     }
 
