@@ -41,13 +41,13 @@
 
                                 <div class="mb-2">
                                     <label for="">Exam Time <small><i>(minute)</i></small></label>
-                                    <input type="number" placeholder="example : 25" name="time" class="form-control" required>
+                                    <input type="number" placeholder="example : 25" name="time" class="form-control"
+                                        required>
                                 </div>
 
                                 <div class="mb-2">
                                     <label>Select Candidate</label><br>
-                                    <select id="select_two" class="form-control" name="user[]"
-                                        multiple="multiple" >
+                                    <select id="select_two" class="form-control" name="user[]" multiple="multiple">
                                         @foreach ($user as $item)
                                             <option value="{{ $item->id }}">{{ $item->name }}</option>
                                         @endforeach
@@ -79,22 +79,24 @@
                     </thead>
                     <tbody>
                         @foreach ($exam as $item)
-                        @php
-                            $users = json_decode($item->user_id);
-                        @endphp
-                        <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->quiz->title }}</td>
-                            <td>{{ $item->time }}</td>
-                            <td>
-                                @foreach ($users as $items)
-                                    <span style="color: #e9ecef;font-weight:300" class="badge bg-secondary">{{ \App\Models\User::find($items)->name }}</span>
-                                @endforeach
-                            </td>
-                            <td>
-                                <a href="{{ route('admin.exam.view',$item->id) }}" class="btn btn-sm btn-info">View Result</a>
-                            </td>
-                        </tr>
+                            @php
+                                $users = json_decode($item->user_id);
+                            @endphp
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $item->quiz->title }}</td>
+                                <td>{{ $item->time }}</td>
+                                <td>
+                                    @foreach ($users as $items)
+                                        <span style="color: #e9ecef;font-weight:300"
+                                            class="badge bg-secondary">{{ \App\Models\User::find($items)->name }}</span>
+                                    @endforeach
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.exam.view', $item->id) }}" class="btn btn-sm btn-info">View
+                                        Result</a>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
