@@ -118,9 +118,9 @@
             }
         });
 
-        window.addEventListener('blur', function() {
-            alert("You are trying to leave the quiz!");
-        });
+        // window.addEventListener('blur', function() {
+        //     alert("You are trying to leave the quiz!");
+        // });
     </script>
 @endsection
 @endsection
