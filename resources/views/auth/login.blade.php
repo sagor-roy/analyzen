@@ -14,7 +14,7 @@
             <div class="row justify-content-center align-items-center" style="height: 100vh">
                 <div class="col-md-6">
                     <div class="card card-body shadow-lg">
-                        <h2 class="text-center fw-bold">Login</h2>
+                        <h2 class="text-center fw-bold">Login fuck</h2>
                         @include('layouts.message')
                         <form action="{{ route('access') }}" class="login-form" method="post">
                             @csrf
