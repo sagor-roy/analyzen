@@ -110,6 +110,17 @@
                 document.getElementById("timer").innerHTML = "<span style='color:red'>EXPIRED</span>";
             }
         }, 1000);
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                alert("Warning: Please stay on this tab during the quiz!");
+                // Optionally send a warning signal to the server
+            }
+        });
+
+        window.addEventListener('blur', function() {
+            alert("You are trying to leave the quiz!");
+        });
     </script>
 @endsection
 @endsection
