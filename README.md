@@ -2,7 +2,7 @@
 
 <p align="center"><b>Note</b> : Please read the entire documentation carefully from A to Z</p>
 
-## Project Description: (version-1.1)
+## Project Description:
 
 This is a small quiz test application (as described in the documentation). Through this application, multiple users can participate in quiz tests. However, before participating in a quiz test, the user must be an *approved user*. If the user is approved, the admin can grant permission for the user to take a quiz. Once the user submits the quiz, they can immediately see their results. The admin has full control over all functionalities in the application. Below, we will discuss these features in detail. But first, let’s learn how to set up this project on your local machine.
 
