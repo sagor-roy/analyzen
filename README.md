@@ -2,9 +2,25 @@
 
 <p align="center"><b>Note</b> : Please read the entire documentation carefully from A to Z</p>
 
-## Project Description:
+## Project Description: (version-1.1)
 
 This is a small quiz test application (as described in the documentation). Through this application, multiple users can participate in quiz tests. However, before participating in a quiz test, the user must be an *approved user*. If the user is approved, the admin can grant permission for the user to take a quiz. Once the user submits the quiz, they can immediately see their results. The admin has full control over all functionalities in the application. Below, we will discuss these features in detail. But first, let’s learn how to set up this project on your local machine.
+
+---
+
+## Technologies Used
+
+This application is built using the following technologies:
+
+- **PHP** (Backend Language)
+- **Laravel Framework** (v8+)
+- **MySQL** (Relational Database)
+- **JavaScript** (Frontend Logic)
+- **HTML/CSS** (Frontend Markup and Styling)
+
+---
+
+## How to Set Up the Project Locally
 
 - To set up this small project, you must have a local server installed on your machine. It can be [Xampp](https://www.apachefriends.org/), [WampServer](https://www.wampserver.com/en/download-wampserver-64bits/), or [Laragon](https://laragon.org/). Before installing the local server, make sure PHP >= 8.0 or any latest version is installed along with [composer.exe](https://getcomposer.org/download/). If you face issues installing the local server, you can refer to this YouTube video: [How to install Xampp Server in Windows](https://youtu.be/FG_tpCCFwOQ).
 - Clone the project from GitHub. After cloning, run the command `composer install` to download the necessary packages into the *vendor* folder.
