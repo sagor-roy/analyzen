@@ -1,75 +1,62 @@
 <p align="center"><img src="https://quiz.konfhub.com/assets/logo-dark-ad176dfd.svg" width="400" alt="Laravel Logo"></p>
 
-<p align="center"><b>Note</b> : The documentation A to Z must be read carefully</p>
+<p align="center"><b>Note</b> : Please read the entire documentation carefully from A to Z</p>
 
-## প্রজেক্টের বর্ণনা: ( version-1.1 )
+## Project Description: (version-1.1)
 
-এটি একটি ছোট কুইজ টেস্ট এপ্লিকেশন (ডকুমেন্টেশনে যেভাবে বলা হয়েছে)। এই এপ্লিকেশন এর মাধ্যমে একাধিক ইউসার কুইজ টেস্টে অংশগ্রহণ করতে পারবেন। তবে ইউসার কুইজ টেস্টে অংশগ্রহণ করার পূর্বে তাকে অবশ্যই approval ইউসার হতে হবে। যদি ইউসার approval ইউসার হয়ে থাকে তাহলে এডমিন কোনো কুইজ টেস্টে অংশগ্রহণ করার জন্য পারমিশন দিলে ওই ইউসার কুইজ টি খেলতে পারবেন এবং কুইজ সাবমিট করার সাথে সাথে তার রেজাল্ট দেখতে পারবেন। এই এপ্লিকেশন এর সমস্ত functionality এডমিন তার নিজের মতো করে হ্যান্ডেল করতে পারবেন।  আমরা এগুলা নিয়ে নিচে বিস্তারিত আলোচনা করবো। তবে চলুন এই ছোট প্রজেক্টি কিভাবে আপনার লোকাল মেশিনে সেটআপ করবেন। 
+This is a small quiz test application (as described in the documentation). Through this application, multiple users can participate in quiz tests. However, before participating in a quiz test, the user must be an *approved user*. If the user is approved, the admin can grant permission for the user to take a quiz. Once the user submits the quiz, they can immediately see their results. The admin has full control over all functionalities in the application. Below, we will discuss these features in detail. But first, let’s learn how to set up this project on your local machine.
 
-- এই ছোট প্রজেক্টি সেটআপ করার জন্য আপনার মেশিনে অবশ্যই একটি লোকাল সার্ভার ইনস্টল করতে হবে। সেটি হতে পারে [Xampp](https://www.apachefriends.org/) , [WampServer](https://www.wampserver.com/en/download-wampserver-64bits/) অথবা [Laragon](https://laragon.org/). তবে লোকাল সার্ভারটি ইনস্টল করার পূর্বে অবশ্যই PHP >= ৮.০ এর সমান অথবা উপরের কোনো লেটেস্ট ভার্সন দেখে ইনস্টল করতে হবে এবং সাথে [composer.exe](https://getcomposer.org/download/) ইনস্টল করতে হবে। যদি লোকাল সার্ভারটি ইনস্টল করতে সমস্যা হয় তাহলে আমি একটি ইউটুবের ভিডিও লিংক শেয়ার করলাম এখন থেকে বিস্তারিত দেখে নিবেন [How to install Xammp Server in windows](https://youtu.be/FG_tpCCFwOQ)
-- প্রথমে প্রজেক্টি গিটহাব থেকে clone করে নিবেন। ক্লোন করা হয়ে গেলে composer install নামে কম্যান্ড টি দিতে হবে। এই command এর মাধ্যমে আমাদের প্রজেক্টের প্রয়োজনীয় প্যাকেজ গুলো vendor ফোল্ডারে ডাউনলোড হয়ে যাবে। 
-- প্রজেক্টের ভীতরে .env.example নামে একটি ফাইল আছে সেটিকে duplicate করে rename করুন এবং এটির নাম .env দিতে হবে। 
-- এবার একটি ডাটাবেস তৈরি করুন। ডাটাবেস হিসাবে আমরা Mysql ব্যবহার করেছি। ডাটাবেস যদি তৈরী করা হয়ে থাকে তাহলে সেই ডাটাবেসের নামটি .env ফাইলের মধ্যে connect করুন। 
-```
-php artisan key:generate
-php artisan migrate
-```
-- সবকিছু ঠিক থাকলে উপরের cmd run করেন এবং এবং নিচের cmd টি অবশ্যই run করতে হবে php artisan db:seed এই cmd চালানোর পর কিছু Fake Data তৈরী হবে সাথে দুইটি Approval একাউন্ট তৈরী হবে।
-```
-php artisan db:seed
-```
-- প্রজেক্টি run করার জন্য নিচের cmd run করুন এবং সবকিছু ঠিক থাকলে [http://127.0.0.1:8000/](http://127.0.0.1:8000/) এই এড্রেস টি ব্রাউজার হিট করুন। 
-```
-php artisan serve
-```
+- To set up this small project, you must have a local server installed on your machine. It can be [Xampp](https://www.apachefriends.org/), [WampServer](https://www.wampserver.com/en/download-wampserver-64bits/), or [Laragon](https://laragon.org/). Before installing the local server, make sure PHP >= 8.0 or any latest version is installed along with [composer.exe](https://getcomposer.org/download/). If you face issues installing the local server, you can refer to this YouTube video: [How to install Xampp Server in Windows](https://youtu.be/FG_tpCCFwOQ).
+- Clone the project from GitHub. After cloning, run the command `composer install` to download the necessary packages into the *vendor* folder.
+- Inside the project, there is a file named `.env.example`. Duplicate and rename it to `.env`.
+- Create a database. We are using MySQL as the database. Once the database is created, connect it in the `.env` file:
+    ```bash
+    php artisan key:generate
+    php artisan migrate
+    ```
+- If everything works fine, run the above commands and then run the following command to seed some fake data, including two *approved accounts*:
+    ```bash
+    php artisan db:seed
+    ```
+- To run the project, use the following command and visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser:
+    ```bash
+    php artisan serve
+    ```
 
-## লগইন
+## Login
 
-- শুরুতেই আপনি একটি লগইন ফর্ম দেখতে পাবেন। এই লগইন ফর্মের মাধ্যমে Admin এবং User তার Approval একাউন্ট দিয়ে দুইজনেই তার নিজ নিজ Dashboard যেতে পারবেন এবং এখানে Register করার জন্য যে ফর্ম দেখা হয়েছে শুধুমাত্র User এর জন্য। আমরা জানি Admin এর জন্য Register ফর্ম থাকেনা। 
-- যদি কোনো user রেজিস্টার করে থাকেন তাহলে তাকে সাথে সাথে লগইন করতে দেয়া হবে না যতক্ষণ না পর্যন্ত Admin তাকে Approved করবে ততক্ষন পর্যন্ত User তার Dashboard এ যেতে পারবেনা। 
-- নিচে দুটি Approval একাঊন্ট দেয়া হলো Check করার জন্য। 
-```
-admin@gmail.com
-password : 000000
+- At the beginning, you will see a login form. Both the Admin and approved Users can log in to their respective dashboards using this form. The registration form provided is only for users since Admin does not require a registration form.
+- If a user registers, they will not be allowed to log in until the Admin approves their account.
+- Here are two approved accounts for testing:
+    ```bash
+    admin@gmail.com
+    password: 000000
 
-user@gmail.com
-password : 000000
-```
+    user@gmail.com
+    password: 000000
+    ```
+
 # Admin Dashboard
 
 ## User List
 
-- আপনি যদি অ্যাডমিন হিসাবে লগইন করেন তাহলে সাইডবারে User List নামে একটি লিংক দেখতে পাচ্ছেন এবং সেখানে ক্লিক করুন।
-- ক্লিক করার পর এখানে সমস্ত User এর লিস্ট দেখানো হয়েছে শুধু অ্যাডমিন বাদে।
-- আপনি এই User List থেকে একজন User কে Approved এবং Reject করতে পারবেন সাথে User এর Details View ,Edit ,Delete সবকিছুই করতে পারবেন।
+- If you log in as an Admin, you will see a "User List" link in the sidebar. Click on it.
+- Here, all users except the Admin are listed.
+- From this User List, you can approve or reject a user, as well as view details, edit, or delete user accounts.
 
 ## Add Quiz
 
-- আপনি Add Quiz লিংকে ক্লিক করলে আপনার তৈরী করা Quiz লিস্ট দেখতে পারবেন এবং নতুন Quiz তৈরী করতে চাইলে উপরের ডান পাশে Add Quiz বাটনে ক্লিক করুন এবং ক্লিক করলে একটি Modal popup হবে। সেই Modal এ আপনার ইনফরমেশন দিয়ে কুইজ তৈরী করুন।
-- Quiz তৈরী করা হলে সেই কুইজ এর Under এ আপনি Question তৈরী করতে পারবেন এবং সেখানে Create Question নামে একটি বাটন দেখতে পাচ্ছেন। এই বাটন এ ক্লিক করলে আপনার Question তৈরী হয়ে যাবে সাথে Quiz টি Edit, Delete সবকিছুই করতে পারবেন।  
-- একটি কুইজ এর under এ কতগুলো Question আছে তা দেখতে চাইলে View Question নামের বাটন এ ক্লিক করুন এবং ক্লিক করলে ওই Quiz এর যতগুলো Question আছে সব দেখতে পারবেন সাথে Question গুলা Edit , Delete করতে পারবেন।
+- When you click the "Add Quiz" link, you will see a list of quizzes you have created. To create a new quiz, click on the "Add Quiz" button at the top right, and a modal popup will appear. Provide the required information in the modal to create the quiz.
+- After creating a quiz, you can add questions to it. You will see a "Create Question" button. Click on it to add questions. You can also edit or delete the quiz as needed.
+- To view all the questions under a specific quiz, click on the "View Question" button. Here, you can see all questions and perform edit or delete operations on them.
 
 ## Exam Attend
 
-- Exam Attend বাটন এ ক্লিক করলে আপনি এখান থেকে Exam Group তৈরী করতে পারবেন। উপরের ডান পাশে Add Exam Group নামের বাটন এ ক্লিক করুন। ক্লিক করলে একটি Modal Popup হয়ে আসবে এবং প্রথমে Quiz সিলেক্ট করতে হবে তারপর ওই Quiz এর একটি সময় নির্ধারন করে দিতে পারবেন এবং যেই সময় টা নির্ধারণ করবেন User কে সেই সময়ের মধ্যেই Quiz টি Submit করতে হবে নতুবা Quiz টি Reject বলে গণ্য করা হবে। তারপর ওই Quiz টি কোন কোন User Attend করতে পারবেন তাদেরকে সিলেক্ট করুন।
-- যেসমস্ত User কে সিলেক্ট করেছেন শুধুমাত্র ওই User রাই Quiz টি খেলতে পারবেন।
-- Exam Group টি তৈরী করা হয়ে গেলে আপনার সিলেক্ট করা Quiz এর টাইটেল এবং সিলেক্ট করা User / Candidate দেখতে পাবেন।
-- তারপর সেখানে View Result নামে একটি বাটন আছে এই বাটন এ ক্লিক করলে আপনি যে যে User কে সিলেক্ট করেছেন তারা Quiz টি খেলে থাকলে তাদের রেজাল্ট দেখতে পারবেন এবং প্রত্যেক - User এর View Details নামের একটি বাটন আছে সেই বাটন এ ক্লিক করলে ওই User টি কোন কোন Question এর ভুল / সঠিক  answer করেছেন তা সবুজ=correct  এবং লাল=wrong Alert এর মাধ্যমে চিহ্নিত করা হয়েছে সাথে Pass Mark এবং Toatal Score দেখানো হয়েছে। 
-- এখানে প্রতিটি Question এর  Mark ৫ করে ধরা হয়েছে এবং যতগুলা Question থাকবে তার উপর নির্ভর করে ৭০% Mark পেতে হবে।
-- একটি কুইজ একজন User একবার খেলে থাকলে ওই Quiz টি আর দ্বিতীয় বার খেলতে পারবেনা।
-
-### What I used
-
-- Use laravel, MySql
-- Laravel custom multiple Authentication with role
-- Custom middleware
-- Using Trait
-- Using migration, factory, seeder
-- Using notiy toaster
-- Logical & functional clean code
-- Highly secured
-
-### Support 
-
-- প্রজেক্টি রান করতে বা কোথাও বুঝতে প্রবলেম হলে যোগাযোগ করতে পারেন।
-- sagorroy204@gmail.com
+- In the "Exam Attend" section, you can create an *Exam Group*. Click on the "Add Exam Group" button at the top right, and a modal popup will appear.
+- First, select a quiz and set a time duration for it. Users will need to submit the quiz within this time; otherwise, the quiz will be considered rejected.
+- Next, select the users who are allowed to attend the quiz.
+- Only the selected users will be able to participate in the quiz.
+- After creating the Exam Group, you will see the quiz title and the selected users/candidates.
+- There is a "View Result" button, which shows the results of the selected users who participated in the quiz. Each user also has a "View Details" button where you can see which questions were answered correctly (marked green) and incorrectly (marked red), along with their *pass marks* and *total score*.
+- Each question is assigned a mark of 5. Users must score at least 70% of the total marks to pass.
+- A user can only take a specific quiz once.
