@@ -16,7 +16,6 @@ This application is built using the following technologies:
 - **Laravel Framework** (v8+)
 - **MySQL** (Relational Database)
 - **JavaScript** (Frontend Logic)
-- **HTML/CSS** (Frontend Markup and Styling)
 
 ---
 
